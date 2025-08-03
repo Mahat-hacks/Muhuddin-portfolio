@@ -1,0 +1,173 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #e1f5fe);
+  color: #2e3a59;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+
+header {
+  background: linear-gradient(135deg, #004aad, #0079ff);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  animation: slideDown 1.2s ease-out;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideUp 1.2s ease-out;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #004aad;
+  font-size: 1.8em;
+  border-left: 5px solid #004aad;
+  padding-left: 12px;
+}
+
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: disc;
+}
+
+
+a {
+  color: #0079ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.project {
+  background: #f8faff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0079ff;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.project:hover {
+  background: #eef7ff;
+}
+
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0079ff;
+  outline: none;
+}
+
+form button {
+  background: #004aad;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #003a8c;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #555;
+  font-size: 0.9em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95em;
+  }
+}
